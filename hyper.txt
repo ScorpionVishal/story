@@ -1,0 +1,238 @@
+
+visha@MSI MINGW64 ~
+$ cd OneDrive/
+
+visha@MSI MINGW64 ~/OneDrive
+$ cd Desktop/story/
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story
+$ cd chapter1.txt/
+bash: cd: chapter1.txt/: Not a directory
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story
+$ ls
+chapter1.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story
+$ open chapter1.txt
+bash: open: command not found
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story
+$ git init
+Initialized empty Git repository in C:/Users/visha/OneDrive/Desktop/story/.git/
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ ls -a
+./  ../  .git/  chapter1.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git add chapter1.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git commit -m "Complete chapter 1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'visha@MSI.(none)')
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git commit -m "Complete chapter 1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'visha@MSI.(none)')
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git commit -m "complete chapter 1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'visha@MSI.(none)')
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git config --global user.email "vishaljaiswal.26102000@gmail.com"
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git config --global user.name "Vishal Jaiswal"
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git commit -m "Complete 1"
+[master (root-commit) 7321a13] Complete 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git log
+commit 7321a13e740d060c2023ed9f297424f745be4c6e (HEAD -> master)
+Author: Vishal Jaiswal <vishaljaiswal.26102000@gmail.com>
+Date:   Fri Jul 8 17:20:13 2022 +0530
+
+    Complete 1
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ touch chapter2.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ touch chapter3.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git add .
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git commit -m "Complete chapter 2 and 3"
+[master 1d32584] Complete chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git log
+commit 1d3258446e912cf7b3bfe8ab49342bf6d2a18452 (HEAD -> master)
+Author: Vishal Jaiswal <vishaljaiswal.26102000@gmail.com>
+Date:   Fri Jul 8 17:26:45 2022 +0530
+
+    Complete chapter 2 and 3
+
+commit 7321a13e740d060c2023ed9f297424f745be4c6e
+Author: Vishal Jaiswal <vishaljaiswal.26102000@gmail.com>
+Date:   Fri Jul 8 17:20:13 2022 +0530
+
+    Complete 1
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index c9ce8c8..a8d5971 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-hey ,I am a programmer
+\ No newline at end of file
++jdjdmcmd,s dj nckmksdksdnjsndkc  dkckdlsksakkqsmdnlksasa,mskwkms kmsmkwarswa
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ ^C
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ touch hyper.txt
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git log
+commit 1d3258446e912cf7b3bfe8ab49342bf6d2a18452 (HEAD -> master)
+Author: Vishal Jaiswal <vishaljaiswal.26102000@gmail.com>
+Date:   Fri Jul 8 17:26:45 2022 +0530
+
+    Complete chapter 2 and 3
+
+commit 7321a13e740d060c2023ed9f297424f745be4c6e
+Author: Vishal Jaiswal <vishaljaiswal.26102000@gmail.com>
+Date:   Fri Jul 8 17:20:13 2022 +0530
+
+    Complete 1
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git remote add origin https://github.com/ScorpionVishal/story.git
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 554 bytes | 554.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/ScorpionVishal/story.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+visha@MSI MINGW64 ~/OneDrive/Desktop/story (master)
+$
